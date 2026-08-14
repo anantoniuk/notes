@@ -1,0 +1,35 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "simple web notebook",
+  "type": "module",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anantoniuk/notes.git"
+  },
+  "keywords": [
+    "notes",
+    "task",
+    "notebook",
+    "notepad"
+  ],
+  "author": "Anna antoniuk.an17@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anantoniuk/notes/issues"
+  },
+  "homepage": "https://github.com/anantoniuk/notes#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.9",
+    "simple-notify": "^1.0.6"
+  }
+}
