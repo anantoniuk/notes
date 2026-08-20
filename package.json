@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/anantoniuk/notes#readme",
   "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.16.4",
     "gh-pages": "^6.3.0",
     "parcel": "^2.16.4"
   },

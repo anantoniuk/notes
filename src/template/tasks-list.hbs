@@ -1,0 +1,23 @@
+<ul class="task__list">{{#each this}}
+    <li class="task__item">
+      <article class="task" data-id="{{id}}">
+        <input data-action="made" type="checkbox" class="task-input__made" 
+        {{#if made}}checked="true"{{/if}}/>
+        <div class="task__info">
+          <h2 class="task__title">{{title}}</h2>
+          {{#if description}}
+            <p class="task-description">{{description}}</p>
+          {{/if}}</div>
+          {{#if (equal priority "low")}}
+        <p class="task__priority task__priority--low">Низький</p>
+          {{/if}}</div>
+          {{#if (equal priority "medium")}}
+        <p class="task__priority task__priority--medium">Середній</p>
+          {{/if}}</div>
+          {{#if (equal priority "high")}}
+        <p class="task__priority task__priority--high">Високий</p>
+          {{/if}}</div>
+        <button data-action="remove" class="remove-btn">✕</button>
+      </article>
+    </li>
+  {{/each}}</ul>
