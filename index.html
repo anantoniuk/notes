@@ -1,4 +1,86 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Нотатник</title><link rel=stylesheet href=notes.38d8a574.css><body>
-    <script type=module src=notes.80f1d422.js></script>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Нотатник</title><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&amp;display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin=anonymous referrerpolicy=no-referrer><link rel=stylesheet href=notes.bf9ae78a.css><link rel=stylesheet href=notes.06a51c13.css><body>
+    <section class=tasks>
+      <div class=container>
+        <div class=left__part>
+          <h1 class=main__title>Нотатки</h1>
+          <div class=progress>
+            <h2 class=active-tasks__num data-active-task>0</h2>
+            <p class=active-tasks__text>
+              активних завдань із <span data-all-task>0</span>
+            </p>
+            <div data-line class=progress__line></div>
+            <p class=active-tasks__interest>
+              <span class=interest data-interest>100</span>% виконано
+            </p>
+          </div>
+          <div class=new-task>
+            <h2 class=new-task__title>Нове завдання</h2>
+            <form data-task-form class=task__form>
+              <label class=task__label for=taskTitle>Назва <span class=task__label--importantly>*</span></label>
+              <input class=task__input name=taskTitle id=taskTitle placeholder="Що потрібно зробити?" required>
+              <label class=task__label for=taskDescription>Опис</label>
+              <textarea name=taskDescription id=taskDescription class=task__description placeholder="Деталі, контекст, посилання..."></textarea>
+              <h2 class=priority__title>Пріоритет</h2>
+              <ul class=priority__list>
+                <li class=priority__item>
+                  <label class=priority__label for=priority-low>
+                    <input type=radio name=priority id=priority-low value=low checked=true class="priority__input priority__input--low">
+                    <p class="priority__text priority__text--low">
+                      Низький
+                    </label>
+                </li>
+                <li class=priority__item>
+                  <label class=priority__label for=priority-medium>
+                    <input type=radio name=priority id=priority-medium value=medium class="priority__input priority__input--medium">
+                    <p class="priority__text priority__text--medium">
+                      Середній
+                    </p>
+                  </label>
+                </li>
+                <li class=priority__item>
+                  <label class=priority__label for=priority-high>
+                    <input type=radio name=priority id=priority-high value=high class="priority__input priority__input--high">
+                    <p class="priority__text priority__text--high">
+                      Високий
+                    </label>
+                </li>
+              </ul>
+              <button class=task__btn--add>+ Додати завдання</button>
+            </form>
+          </div>
+        </div>
+        <div class=right__part>
+          <div class=top___part>
+            <div class=top__wrap>
+              <h2 class=tasks__title>ВСІ ЗАВДАННЯ</h2>
+              <div class=tasks__btns-wrap>
+                <ul class=tasks__list>
+                  <li class=tasks__item>
+                    <button class="current tasks__btn" data-filter=all>
+                      Всі <span class=tasks__btn--num data-all-task>0</span>
+                    </button>
+                  </li>
+                  <li class=tasks__item>
+                    <button class=tasks__btn data-filter=active>
+                      Активні <span data-active-task>0</span>
+                    </button>
+                  </li>
+                  <li class=tasks__item>
+                    <button class=tasks__btn data-filter=completed>
+                      Виконані <span data-completed-task>0</span>
+                    </button>
+                  </li>
+                </ul>
+                <button data-action=clear class="clear-btn tasks__btn">
+                  Очистити
+                </button>
+              </div>
+            </div>
+          </div>
+          <div data-task-block class=tasks-block></div>
+        </div>
+      </div>
+    </section>
+    <script type=module src=notes.54c4bedf.js></script>
   
 
